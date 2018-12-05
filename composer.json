@@ -1,0 +1,45 @@
+{
+  "name": "cyberspectrum/i18n",
+  "description": "Simple copying and handling of translation dictionaries",
+  "license": "MIT",
+  "keywords": [
+    "i18n"
+  ],
+  "type": "library",
+  "homepage": "https://www.cyberspectrum.de/",
+  "authors": [
+    {
+      "name": "Christian Schiffler",
+      "email": "c.schiffler@cyberspectrum.de",
+      "homepage": "https://www.cyberspectrum.de",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "email": "info@cyberspectrum.de",
+    "issues": "https://github.com/cyberspectrum/i18n/issues",
+    "source": "https://github.com/cyberspectrum/i18n"
+  },
+  "require": {
+    "php": "^7.1.3",
+    "symfony/dependency-injection": "^3.4 | 4.1"
+  },
+  "require-dev": {
+    "phpcq/all-tasks": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "CyberSpectrum\\I18N\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CyberSpectrum\\I18N\\Test\\": "tests"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
