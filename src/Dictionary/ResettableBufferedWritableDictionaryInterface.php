@@ -23,6 +23,8 @@ namespace CyberSpectrum\I18N\Dictionary;
 
 /**
  * This interface describes a dictionary that can revert buffered updates.
+ *
+ * @@SuppressWarnings(PHPMD.LongClassName)
  */
 interface ResettableBufferedWritableDictionaryInterface
 {
