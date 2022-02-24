@@ -86,12 +86,10 @@ class CompoundDictionary implements DictionaryInterface
      * @param string              $prefix     The prefix for the dictionary.
      * @param DictionaryInterface $dictionary The dictionary to add.
      *
-     * @return static
-     *
      * @throws RuntimeException When already a dictionary with the prefix is contained.
      * @throws NotSupportedException On language mismatch.
      */
-    public function addDictionary(string $prefix, DictionaryInterface $dictionary)
+    public function addDictionary(string $prefix, DictionaryInterface $dictionary): void
     {
         if (isset($this->dictionaries[$prefix])) {
             throw new RuntimeException('A dictionary with prefix "' . $prefix . '" has already been added.');
@@ -114,8 +112,6 @@ class CompoundDictionary implements DictionaryInterface
         }
 
         $this->dictionaries[$prefix] = $dictionary;
-
-        return $this;
     }
 
     /**

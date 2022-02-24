@@ -52,31 +52,23 @@ class MemoryTranslationValue implements WritableTranslationValueInterface
         return !$this->getTarget();
     }
 
-    public function setSource(string $value): self
+    public function setSource(string $value): void
     {
         $this->source = $value;
-
-        return $this;
     }
 
-    public function setTarget(string $value): self
+    public function setTarget(string $value): void
     {
         $this->target = $value;
-
-        return $this;
     }
 
-    public function clearSource(): self
+    public function clearSource(): void
     {
         $this->source = null;
-
-        return $this;
     }
 
-    public function clearTarget(): self
+    public function clearTarget(): void
     {
         $this->target = null;
-
-        return $this;
     }
 }

@@ -44,17 +44,13 @@ class WritableCompoundDictionary extends CompoundDictionary implements WritableD
      * @param string              $prefix     The prefix for the dictionary.
      * @param DictionaryInterface $dictionary The dictionary to add.
      *
-     * @return static
-     *
      * @throws InvalidArgumentException When the dictionary is not writable.
      */
-    public function addDictionary(string $prefix, DictionaryInterface $dictionary)
+    public function addDictionary(string $prefix, DictionaryInterface $dictionary): void
     {
         if (!$dictionary instanceof WritableDictionaryInterface) {
             throw new InvalidArgumentException('Dictionaries in ' . __CLASS__ . ' must be writable.');
         }
         parent::addDictionary($prefix, $dictionary);
-
-        return $this;
     }
 }

@@ -13,31 +13,23 @@ interface WritableTranslationValueInterface extends TranslationValueInterface
      * Set the source value.
      *
      * @param string $value The new value.
-     *
-     * @return static
      */
-    public function setSource(string $value);
+    public function setSource(string $value): void;
 
     /**
      * Set the target value.
      *
      * @param string $value The new value.
-     *
-     * @return static
      */
-    public function setTarget(string $value);
+    public function setTarget(string $value): void;
 
     /**
      * Clear the source value.
-     *
-     * @return static
      */
-    public function clearSource();
+    public function clearSource(): void;
 
     /**
      * Clear the target value.
-     *
-     * @return static
      */
-    public function clearTarget();
+    public function clearTarget(): void;
 }

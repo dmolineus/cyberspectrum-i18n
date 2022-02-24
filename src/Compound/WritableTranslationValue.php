@@ -14,33 +14,33 @@ use CyberSpectrum\I18N\TranslationValue\WritableTranslationValueInterface;
 class WritableTranslationValue extends TranslationValue implements WritableTranslationValueInterface
 {
     /**
-     * {@inheritDoc}
+     * Create a new instance.
+     *
+     * @param string                            $prefix   The prefix.
+     * @param WritableTranslationValueInterface $delegate The delegate.
      */
-    public function setSource(string $value)
+    public function __construct(string $prefix, WritableTranslationValueInterface $delegate)
+    {
+        parent::__construct($prefix, $delegate);
+    }
+
+    public function setSource(string $value): void
     {
         $this->delegate->setSource($value);
-
-        return $this;
     }
 
-    public function setTarget(string $value)
+    public function setTarget(string $value): void
     {
         $this->delegate->setTarget($value);
-
-        return $this;
     }
 
-    public function clearSource()
+    public function clearSource(): void
     {
         $this->delegate->clearSource();
-
-        return $this;
     }
 
-    public function clearTarget()
+    public function clearTarget(): void
     {
         $this->delegate->clearTarget();
-
-        return $this;
     }
 }
