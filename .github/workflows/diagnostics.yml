@@ -10,19 +10,19 @@ jobs:
     strategy:
       matrix:
         include:
-          - php: 7.4
+          - php: '7.4'
             output: '-o github-action -o default'
             phpcq_install: 'install'
             composer_install: 'update --prefer-lowest'
-          - php: 7.4
+          - php: '7.4'
             output: '-o github-action -o default'
             phpcq_install: 'update'
             composer_install: 'update'
-          - php: 8.0
+          - php: '8.0'
             output: '-o github-action -o default'
             phpcq_install: 'update'
             composer_install: 'update'
-          - php: 8.1
+          - php: '8.1'
             output: '-o github-action -o default'
             phpcq_install: 'update'
             composer_install: 'update'
