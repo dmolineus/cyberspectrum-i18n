@@ -17,7 +17,7 @@
  * @filesource
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace CyberSpectrum\I18N\Dictionary;
 

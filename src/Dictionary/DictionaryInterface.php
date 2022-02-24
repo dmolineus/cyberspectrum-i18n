@@ -17,12 +17,13 @@
  * @filesource
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace CyberSpectrum\I18N\Dictionary;
 
 use CyberSpectrum\I18N\Exception\TranslationNotFoundException;
 use CyberSpectrum\I18N\TranslationValue\TranslationValueInterface;
+use Traversable;
 
 /**
  * This interface describes a dictionary.
@@ -32,9 +33,9 @@ interface DictionaryInterface
     /**
      * Obtain all keys within the dictionary.
      *
-     * @return \Traversable|string[]
+     * @return Traversable<string>
      */
-    public function keys(): \Traversable;
+    public function keys(): Traversable;
 
     /**
      * Obtain the value for a translation key.
