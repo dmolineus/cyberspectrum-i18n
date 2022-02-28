@@ -13,6 +13,7 @@
          beStrictAboutTodoAnnotatedTests="true"
          bootstrap="vendor/autoload.php"
 >
+  <testsuites>
     <testsuite name="cyberspectrum/i18n tests">
       <directory>tests</directory>
     </testsuite>
