@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace CyberSpectrum\I18N\Memory;
 
-use ArrayIterator;
 use CyberSpectrum\I18N\Dictionary\WritableDictionaryInterface;
 use CyberSpectrum\I18N\Exception\TranslationAlreadyContainedException;
 use CyberSpectrum\I18N\Exception\TranslationNotFoundException;
@@ -73,7 +72,9 @@ class MemoryDictionary implements WritableDictionaryInterface
 
     public function keys(): Traversable
     {
-        return new ArrayIterator(array_keys($this->translationBuffer));
+        foreach ($this->translationBuffer as $key => $_ignored) {
+            yield $key;
+        }
     }
 
     public function get(string $key): TranslationValueInterface

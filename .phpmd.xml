@@ -9,7 +9,14 @@
   </description>
 
   <rule ref="rulesets/codesize.xml"/>
-  <rule ref="rulesets/controversial.xml"/>
+  <rule ref="rulesets/controversial.xml">
+    <exclude name="CamelCaseVariableName"/>
+  </rule>
+  <rule ref="rulesets/controversial.xml/CamelCaseVariableName">
+    <properties>
+      <property name="allow-underscore" value="true"/>
+    </properties>
+  </rule>
   <rule ref="rulesets/design.xml"/>
   <rule ref="rulesets/naming.xml">
     <exclude name="ShortVariable" />
@@ -19,6 +26,12 @@
       <property name="exceptions" value="id" />
     </properties>
   </rule>
-  <rule ref="rulesets/unusedcode.xml"/>
-
+  <rule ref="rulesets/unusedcode.xml">
+    <exclude name="UnusedLocalVariable"/>
+  </rule>
+  <rule ref="rulesets/unusedcode.xml/UnusedLocalVariable">
+    <properties>
+      <property name="allow-unused-foreach-variables" value="true"/>
+    </properties>
+  </rule>
 </ruleset>

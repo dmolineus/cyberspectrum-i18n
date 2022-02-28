@@ -87,7 +87,8 @@ class JobFactory
      */
     public function createJob(Definition $configuration): TranslationJobInterface
     {
-        if (!is_string($type = $configuration->get('type')) || !$this->jobBuilders->has($type)) {
+        $type = $configuration->get('type');
+        if (!is_string($type) || !$this->jobBuilders->has($type)) {
             throw new UnexpectedValueException('Unknown job type ' . var_export($type, true));
         }
 

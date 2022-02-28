@@ -33,7 +33,7 @@ interface DictionaryInterface
     /**
      * Obtain all keys within the dictionary.
      *
-     * @return Traversable<string>
+     * @return Traversable<int, string>
      */
     public function keys(): Traversable;
 

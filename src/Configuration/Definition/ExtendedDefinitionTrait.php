@@ -22,7 +22,9 @@ trait ExtendedDefinitionTrait
     /**
      * @throws RuntimeException When a parent value is not of type array and can therefore not be merged.
      *
-     * @psalm-suppress LessSpecificImplementedReturnType
+     * @return TDataArray
+     *
+     * @psalm-suppress MoreSpecificReturnType
      */
     public function getData(): array
     {

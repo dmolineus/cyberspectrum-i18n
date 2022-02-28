@@ -12,6 +12,8 @@ use function array_keys;
  * This adds a method "ids" for being able to inspect the list of registered service ids to the service locator.
  *
  * This helps mainly for debug purposes at the expense of more memory usage.
+ *
+ * @psalm-suppress PropertyNotSetInConstructor - we inherit some properties that are checked via isset().
  */
 class IdProvidingServiceLocator extends ServiceLocator
 {

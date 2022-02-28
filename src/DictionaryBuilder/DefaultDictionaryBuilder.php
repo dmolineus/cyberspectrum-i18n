@@ -50,7 +50,6 @@ class DefaultDictionaryBuilder implements DictionaryBuilderInterface
             );
         }
 
-        /** @var DictionaryProviderInterface $provider */
         return $provider->getDictionary(
             $definition->getDictionary(),
             $definition->getSourceLanguage(),
