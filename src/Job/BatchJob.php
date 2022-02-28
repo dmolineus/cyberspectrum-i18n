@@ -6,7 +6,6 @@ namespace CyberSpectrum\I18N\Job;
 
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
-use Psr\Log\NullLogger;
 
 /**
  * This job is a composite of several other jobs.
@@ -26,7 +25,7 @@ class BatchJob implements TranslationJobInterface, LoggerAwareInterface
     public function __construct(array $jobs)
     {
         $this->jobs = $jobs;
-        $this->setLogger(new NullLogger());
+        $this->logger = null;
     }
 
     public function run(?bool $dryRun = null): void
