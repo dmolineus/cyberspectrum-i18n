@@ -6,21 +6,9 @@ namespace CyberSpectrum\I18N\Configuration;
 
 use InvalidArgumentException;
 
-/**
- * This loads a config file.
- */
-abstract class AbstractConfigurationLoader
+/** This loads a config file. */
+abstract class AbstractConfigurationLoader implements ConfigurationLoaderInterface
 {
-    /**
-     * Load a configuration.
-     *
-     * @param mixed              $source The configuration to load (file name or the like).
-     * @param Configuration|null $config The configuration to load or null.
-     *
-     * @return Configuration
-     *
-     * @throws InvalidArgumentException When the configuration type is unsupported.
-     */
     public function load($source, Configuration $config = null): Configuration
     {
         if (null === $config) {
