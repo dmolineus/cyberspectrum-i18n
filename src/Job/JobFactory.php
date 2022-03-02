@@ -56,7 +56,11 @@ class JobFactory
         $this->logger             = $logger;
     }
 
-    /** Obtain the job names. */
+    /**
+     * Obtain the job names.
+     *
+     * @return list<string>
+     */
     public function getJobNames(): array
     {
         return $this->configuration->getJobNames();
