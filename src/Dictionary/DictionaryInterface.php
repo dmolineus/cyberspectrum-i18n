@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CyberSpectrum\I18N\Dictionary;
 
+use CyberSpectrum\I18N\Exception\NotSupportedException;
 use CyberSpectrum\I18N\Exception\TranslationNotFoundException;
 use CyberSpectrum\I18N\TranslationValue\TranslationValueInterface;
 use Traversable;
@@ -27,6 +28,7 @@ interface DictionaryInterface
      *
      * @return TranslationValueInterface
      *
+     * @throws NotSupportedException When the key is in bad or unsupported format.
      * @throws TranslationNotFoundException When the key is not found.
      */
     public function get(string $key): TranslationValueInterface;

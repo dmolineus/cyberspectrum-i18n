@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace CyberSpectrum\I18N\Dictionary;
 
+use CyberSpectrum\I18N\Exception\NotSupportedException;
 use CyberSpectrum\I18N\Exception\TranslationAlreadyContainedException;
 use CyberSpectrum\I18N\Exception\TranslationNotFoundException;
 use CyberSpectrum\I18N\TranslationValue\WritableTranslationValueInterface;
@@ -21,6 +22,7 @@ interface WritableDictionaryInterface extends DictionaryInterface
      * @return WritableTranslationValueInterface
      *
      * @throws TranslationAlreadyContainedException When the key is already contained and the dictionary does not allow.
+     * @throws NotSupportedException When the key is in bad or unsupported format or adding is not supported.
      */
     public function add(string $key): WritableTranslationValueInterface;
 
@@ -32,6 +34,7 @@ interface WritableDictionaryInterface extends DictionaryInterface
      * @return void
      *
      * @throws TranslationNotFoundException When the key is not found.
+     * @throws NotSupportedException When the key is in bad or unsupported format or removing is not supported.
      */
     public function remove(string $key): void;
 
@@ -42,6 +45,7 @@ interface WritableDictionaryInterface extends DictionaryInterface
      *
      * @return WritableTranslationValueInterface
      *
+     * @throws NotSupportedException When the key is in bad or unsupported format.
      * @throws TranslationNotFoundException When the key is not found and the dictionary does not add automatically.
      */
     public function getWritable(string $key): WritableTranslationValueInterface;
