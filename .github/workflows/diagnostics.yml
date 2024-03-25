@@ -24,7 +24,11 @@ jobs:
             composer_install: 'update'
           - php: '8.2'
             phpcq_install: 'update'
-            phpcq_flags: '--exit-0'
+            phpcq_flags: ''
+            composer_install: 'update'
+          - php: '8.3'
+            phpcq_install: 'update'
+            phpcq_flags: ''
             composer_install: 'update'
 
     steps:
